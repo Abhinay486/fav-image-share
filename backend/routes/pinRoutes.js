@@ -4,7 +4,7 @@ import { cmntonPin, createPin, deleteComment, deletePin, getAllPins, getSinglepi
 import uploadFile from "../middlewares/multer.js";
 const router = express.Router();
 router.post("/new", isAuth, uploadFile, createPin)
-router.get("/all", isAuth, getAllPins);
+router.get("/all", getAllPins);
 router.get("/:id", isAuth, getSinglepins);
 router.put("/:id", isAuth, updatePin);
 router.delete("/:id", isAuth, deletePin);

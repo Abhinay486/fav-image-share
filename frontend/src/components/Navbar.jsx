@@ -12,11 +12,11 @@ const Navbar = ({ user }) => {
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/145/145808.png"
+            src="https://cdn-icons-png.flaticon.com/128/3097/3097028.png"
             alt="Pinterest Logo"
             className="h-6 md:h-8"
           />
-          <span className="text-red-600 text-xl font-bold">Pinterest</span>
+          <span className="text-[#1d87db] text-xl font-bold">Fav Image Share</span>
         </Link>
 
         {/* Navigation Links */}

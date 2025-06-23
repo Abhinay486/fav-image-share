@@ -14,7 +14,7 @@ const PinCard = ({ pin }) => {
       {/* View Pin Button */}
       <Link
         to={`/pin/${pin._id}`}
-        className="absolute inset-x-0 bottom-4 mx-auto w-max bg-red-600 text-white px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+        className="absolute inset-x-0 bottom-4 mx-auto w-max bg-[#1d87db] text-white  px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
       >
         View Pin
       </Link>

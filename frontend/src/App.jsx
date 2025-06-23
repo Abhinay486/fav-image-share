@@ -21,9 +21,9 @@ const App = () => {
         loading ? (<LoadingAnimationpage />) :
         (
             <BrowserRouter>
-            {isAuth && <Navbar user={user} />}
+            <Navbar user={user} />
             <Routes>
-                <Route path = "/" element = {isAuth ? <Home/> : <Login />} />
+                <Route path = "/" element = {<Home/>} />
                 <Route path = "/account" element = {isAuth ? <Account user={user}/> : <Login />} />
                 <Route path = "/user/:id" element = {isAuth ? <UserProfile user={user}/> : <Login />} />
                 <Route path = "/create" element = {isAuth ? <Create/> : <Login />} />

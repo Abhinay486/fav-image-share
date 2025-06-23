@@ -18,6 +18,10 @@ const schema = new mongoose.Schema({
         id : String,
         url : String,
     },
+    tags: {
+    type: [String], // ✅ New field to store hashtag strings
+    default: [],
+  },
     comments:[{
         user : {
           type : String,

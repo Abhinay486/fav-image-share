@@ -18,6 +18,7 @@ const Create = () => {
   const navigate = useNavigate();
 
   const changeFileHandler = (e) => {
+
     const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
@@ -30,6 +31,7 @@ const Create = () => {
   };
 
   const addPinh = (e) => {
+    
     e.preventDefault();
 
     // Create a new FormData instance
