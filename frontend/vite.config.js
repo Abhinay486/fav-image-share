@@ -6,18 +6,18 @@ export default defineConfig({
   plugins: [react()],
   define: {
     'process.env': {},
-    global: "window",  // Fixes missing 'global'
+    global: "window", // Fixes missing 'global'
   },
   resolve: {
     alias: {
-      buffer: path.resolve(__dirname, "node_modules/buffer/"), // Absolute path
-      stream: path.resolve(__dirname, "node_modules/stream-browserify/"), // Fix for stream
+      buffer: path.resolve(__dirname, "node_modules/buffer/"),
+      stream: path.resolve(__dirname, "node_modules/stream-browserify/"),
     },
   },
   server: {
     proxy: {
       "/api": {
-        target: "https://pinterest-clone-1-9mwr.onrender.com",
+        target: "https://fav-image-share.onrender.com", // Your backend
         changeOrigin: true,
         secure: false,
       },
@@ -25,7 +25,8 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ["mock-aws-s3", "aws-sdk", "nock"],
+      // 🚫 Tell Vite NOT to bundle these (they're backend-only or Node.js-only)
+      external: ["bcryptjs", "mock-aws-s3", "aws-sdk", "nock", "fs", "path", "crypto"],
     },
   },
 });
