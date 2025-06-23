@@ -17,7 +17,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://fav-image-share.onrender.com", // Your backend
+        target: "https://fav-image-share-main.onrender.com", // Your backend
         changeOrigin: true,
         secure: false,
       },
